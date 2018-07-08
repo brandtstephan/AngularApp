@@ -1,0 +1,21 @@
+{
+  "name": "practiceproyect",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/frontend/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "angular": "^1.7.2",
+    "bootstrap": "^4.1.1",
+    "angular-ui-router": "^1.0.18",
+    "ng-bootstrap": "@ng-bootstrap/ng-bootstrap#^1.0.1"
+  }
+}
