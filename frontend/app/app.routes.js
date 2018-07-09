@@ -10,6 +10,11 @@
                     url: '/',
                     controller: 'mainCtrl',
                     templateUrl: 'app/app.html'
+                })
+                .state("ui",{
+                    url: '/',
+                    controller: 'uiCtrl',
+                    templateUrl: 'app/app.html'
                 });
             });
 
