@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  fill: black;
+  fill-opacity: 60%;
+}
+
+table tr td:nth-child(2) {
+  text-align: right;
+}
+table {
+  width: 100%;
+}
+.centered {
+  text-align: center;
+}
