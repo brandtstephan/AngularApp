@@ -27,8 +27,8 @@
     .controller("uiCtrl", function($scope) {
       $scope.oneAtATime = true;
       $scope.groups = [
-        {
-          open = false,
+        { 
+          open: false,
           title: "Information",
           content: [
             {
@@ -54,7 +54,7 @@
           ]
         },
         {
-          open = false,
+          open:false,
           title: "Bildung",
           content: [
             {
@@ -79,7 +79,7 @@
           ]
         },
         {
-          open = false,
+          open:false,
           title: "Technische Details",
           content: [
             {
@@ -94,7 +94,7 @@
           ]
         },
         {
-          open = false,
+          open: false,
           title: "Berufserfahrung",
           content: [
             {
