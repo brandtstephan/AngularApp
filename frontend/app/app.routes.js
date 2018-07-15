@@ -10,7 +10,7 @@
         templateUrl: "app/app.html"
       })
       .state("ui", {
-        parent:"main",
+        parent: "main",
         url: "/ui",
         controller: "uiCtrl",
         templateUrl: "app/app.html"

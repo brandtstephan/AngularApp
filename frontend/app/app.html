@@ -1,4 +1,5 @@
 <div class="container">
+  <!--Header begin-->
   <div class="panel panel-primary">
     <div class="panel-heading">
       <p class="centered">Wilkommen</p>
@@ -6,27 +7,46 @@
     <div class="panel-body">
       <h3 class="centered">{{getUsers.name}} {{getUsers.last}}</h3>
     </div>
+    <!--Header end-->
 
-    <div ng-controller="uiCtrl">
-      
-      <uib-accordion>
-        <div uib-accordion-group class="panel-default" ng-repeat="group in groups" is-open="group.open">
-          <uib-accordion-heading ng-click="group.open = !group.open">
-            <div class="centered">
-              {{group.title}}
-              <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': group.open, 'glyphicon-chevron-right': !group.open}"></i>
+    <!--Button begin-->
+    <div ng-controller="uiCtrl" class="centered">
+
+      <div class="btn-group">
+        <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'">Information</label>
+        <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'">Sprachen</label>
+        <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'">Projekte</label>
+      </div>
+      <!--Button end-->
+      <div ng-if='radioModel === "Left";'>
+        <!--Accordion begin-->
+        <ng-template>
+          <uib-accordion>
+            <div uib-accordion-group class="panel-default" ng-repeat="group in groups" is-open="group.open">
+              <uib-accordion-heading ng-click="group.open = !group.open">
+                <div class="centered">
+                  {{group.title}}
+                  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': group.open, 'glyphicon-chevron-right': !group.open}"></i>
+                </div>
+              </uib-accordion-heading>
+              <table>
+                <tr ng-repeat="cont in group.content">
+                  <td id="leftTableRow">{{cont.title}}</td>
+                  <td>{{cont.content}}</td>
+                </tr>
+              </table>
             </div>
-          </uib-accordion-heading>
-          <table>
-            <tr ng-repeat="cont in group.content">
-              <td id="leftTableRow">{{cont.title}}</td>
-              <td>{{cont.content}}</td>
-            </tr>
-          </table>
-        </div>
-
-      </uib-accordion>
-
+          </uib-accordion>
+        </ng-template>
+      </div>
+      <div ng-if='radioModel === "Middle";'>
+        <ng-template>
+          <svg class="chart"></svg>
+        </ng-template>
+      </div>
     </div>
+
+    <!--Accordion end-->
+
   </div>
 </div>
