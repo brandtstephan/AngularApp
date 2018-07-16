@@ -7,6 +7,17 @@
     const _ = require('lodash');
     const io = require('socket.io').listen(server);
 
+    const commands = require('./backend/commands.js');
+    console.log(commands);
+
     app.use(express.static(__dirname + '/frontend'));
+
+    io.sockets.on('connection', socket =>{
+        _.each(commands, (command, id) =>{
+            socket.on(id, (data, done) => {
+                command(data,done);
+            });
+        });
+    });
     
 })();

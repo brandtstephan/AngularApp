@@ -18,10 +18,17 @@
         getUsers: getUsers
       };
     })
-    .controller("mainCtrl", function($scope, User) {
+    .controller("mainCtrl", function($scope, User, commands) {
       const ctrl = this;
 
+      $scope.commands = commands;
       $scope.getUsers = User.getUsers();
+      $scope.testRequest = ()=>{
+        $scope.commands.requestTest()
+        .then((reply)=>{
+          console.log(reply);
+        });
+      };
     })
     .controller("uiCtrl", function($scope) {
       $scope.oneAtATime = true;

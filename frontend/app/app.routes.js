@@ -11,7 +11,7 @@
       })
       .state("ui", {
         parent: "main",
-        url: "/ui",
+        url: "/ui ",
         controller: "uiCtrl",
         templateUrl: "app/app.html"
       });
