@@ -1,25 +1,19 @@
-(function(){
+(function () {
+  angular.module("app").factory("socket", function ($rootScope) {
+    let socket = io.connect();
 
-    angular
-        .module('app')
-        .factory('socket', function($rootScope){
-            let socket = io.connect();
+    const service = {
+      emit: emit
+    };
 
-            const service ={
-                emit: emit
-            }
+    return service;
 
-            return service;
-
-            function emit(name, data, callback){
-                socket.emit(name, data, function(){
-                    const args = arguments;
-                    $rootScope.$apply(function(){
-                        callback.apply(socket,args);
-                    })
-                })
-
-            }
-    });
-
+    function emit(name, data, callback) {
+      socket.emit(name, data, (args) => {
+        $rootScope.$apply(function () {
+          callback(args);
+        });
+      });
+    }
+  });
 })();

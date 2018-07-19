@@ -12,17 +12,10 @@ table {
   fill: steelblue;
 }
 
-.axis text {
-  font: 10px sans-serif;
+.bar:hover {
+  fill: brown;
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
-}
-
-.x.axis path {
+.axis--x path {
   display: none;
 }

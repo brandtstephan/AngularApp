@@ -10,6 +10,7 @@
     <!--Header end-->
 
     <!--Button begin-->
+
     <div ng-controller="uiCtrl" class="centered">
 
       <div class="btn-group">
@@ -41,12 +42,23 @@
       </div>
       <div ng-if='radioModel === "Middle";'>
         <ng-template>
-          <svg class="chart"></svg>
+          <data-chart></data-chart>
+        </ng-template>
+      </div>
+      <div ng-if='radioModel === "Right";'>
+        <ng-template>
+          <div class="webgl-content">
+            <div id="gameContainer" style="width: 960px; height: 600px; margin: auto;"></div>
+            <div class="footer">
+              <div class="webgl-logo"></div>
+              <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+              <div class="title">Effizientes Rendering</div>
+            </div>
+          </div>
         </ng-template>
       </div>
     </div>
 
     <!--Accordion end-->
-
   </div>
 </div>

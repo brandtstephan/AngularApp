@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
 <head>
-    <title>Practice</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Lebenslauf</title>
 
     <!--Css-->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="shortcut icon" href="unity/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="unity/TemplateData/style.css">
 
     <!--Third parties-->
     <script src="/socket.io/socket.io.js"></script>
@@ -29,11 +33,19 @@
     <script src="app/app.routes.js"></script>
     <script src="app/socket.io.service.js"></script>
     <script src="app/commands.service.js"></script>
+    <script src="app/app.d3.js"></script>
+    <script src="unity/TemplateData/UnityProgress.js"></script>
+    <script src="unity/Build/UnityLoader.js"></script>
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "unity/Build/UnityPackageManager.json", { onProgress: UnityProgress });
+    </script>
+
 
 </head>
 
 <body ng-app='app'>
     <div ui-view></div>
+
 </body>
 
 </html>
