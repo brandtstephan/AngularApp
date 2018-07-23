@@ -8,11 +8,11 @@ table {
   text-align: center;
 }
 
-.bar {
+#bar {
   fill: steelblue;
 }
 
-.bar:hover {
+#bar:hover {
   fill: brown;
 }
 

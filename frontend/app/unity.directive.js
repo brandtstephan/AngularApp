@@ -1,0 +1,19 @@
+(function (){
+    "use strict";
+    angular
+    .module("app")
+    .directive("unityDirective", function () {
+      return {
+        restrict: "AE",
+        replace: true,
+        scope: {
+  
+        },
+        templateUrl: "app/unity-templa.html",
+  
+        link: function(scope, element, attrs){
+            var gameInstance = UnityLoader.instantiate("gameContainer", "unity/Build/UnityPackageManager.json", { onProgress: UnityProgress });
+        }
+      };
+    });
+  })();

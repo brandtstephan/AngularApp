@@ -68,10 +68,5 @@
       console.log($scope.groups);
 
       $scope.radioModel = "Left";
-    }).directive("dataChart", function () {
-      return {
-        restrict: "E",
-        templateUrl: "d3-template.html"
-      };
     });
 })();
