@@ -7,7 +7,7 @@ module.exports = class data {
     this.jsonFile = JSON.parse(content);
   }
 
-  //Returns the list of all tracks
+  //Returns an object with the data
   getAllData() {
     return this.jsonFile;
   }

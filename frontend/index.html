@@ -7,11 +7,10 @@
     <title>Lebenslauf</title>
 
     <!--Css-->
-    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <<!--link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">-->
-    <link rel="shortcut icon" href="unity/TemplateData/favicon.ico">
-    <link rel="stylesheet" href="unity/TemplateData/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
     <!--Third parties-->
     <script src="/socket.io/socket.io.js"></script>
@@ -33,21 +32,17 @@
     <script src="app/app.routes.js"></script>
     <script src="app/socket.io.service.js"></script>
     <script src="app/commands.service.js"></script>
+    <script src="app/unity.directive.js"></script>
+    <script src="app/d3.directive.js"></script>
     <script src="unity/TemplateData/UnityProgress.js"></script>
     <script src="unity/Build/UnityLoader.js"></script>
-    <script src="app/d3.directive..js"></script>
-    <script src="app/unity.directive.js"></script>
-    <script>
-        
-    </script>
+
 
 
 </head>
 
 <body ng-app='app'>
-    <div ui-view></div>
-
-
+    <div ui-view class="root-view"></div>
 </body>
 
 </html>

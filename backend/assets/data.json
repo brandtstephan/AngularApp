@@ -2,10 +2,10 @@
   "groups": [
     {
       "open": false,
-      "title": "Information",
+      "title": "Persönliche Information",
       "content": [
         {
-          "title": "Adress",
+          "title": "Adresse",
           "content": "Kochstrasse 5, 54290 Trier"
         },
         {
@@ -32,13 +32,11 @@
       "content": [
         {
           "title": "2014-Jetzt",
-          "content":
-            "Hochschulebildung an der Hochschule Trier Fachrichtung: Informatik. Schwerpunkt: Digitale Medien und Spieler"
+          "content": "Hochschulebildung an der Hochschule Trier Fachrichtung: Informatik. Schwerpunkt: Digitale Medien und Spiele"
         },
         {
           "title": "2013-2014",
-          "content":
-            "Internationale Studienkolleg an der Hochschule Kaiserslautern Schwerpunkt: Naturwissenschaft"
+          "content": "Internationale Studienkolleg an der Hochschule Kaiserslautern Schwerpunkt: Naturwissenschaft"
         },
         {
           "title": "2011-2012",
@@ -46,8 +44,7 @@
         },
         {
           "title": "2000-2011",
-          "content":
-            "Primär-und Sekundärschule an der Champagnat Schule in Caracas, Venezuela"
+          "content": "Primar-und Sekundarschule an der Champagnat Schule in Caracas, Venezuela"
         }
       ]
     },
@@ -61,8 +58,7 @@
         },
         {
           "title": "Werkzeuge",
-          "content":
-            "Android Studios, Unity3D, Node.js und npm, Repository, Adobe XD, Bash für Linux, Verschidene IDEs"
+          "content": "Android Studios, Unity3D, Node.js und npm, Angular.js, D3.js, P5.js , Repository, Adobe XD, Bash für Linux, Verschidene IDEs"
         }
       ]
     },
@@ -77,6 +73,50 @@
         {
           "title": "2012-2014",
           "content": "Kaffe Nr. 15 Kaiserslautern: Kellner und Barkeeper."
+        }
+      ]
+    },
+    {
+      "open": false,
+      "title": "Fähigkeiten",
+      "content": [
+        {
+          "title": "Webentwicklung",
+          "content": "Client mit LESS nach CSS; backend mit Express, Node.js und npm; modulare Entwicklung mit Hilfe von Common.js und RESTful API; entwicklung von Web-Anwendung mit Hilfe von Angular.js für die Frontend und Express Sockets in der Backend."
+        },
+        {
+          "title": "Google Chrome Erweiterungen",
+          "content": "Entwicklung von Google Chrome Erweiterungen"
+        },
+        {
+          "title": "Entwicklung mobiler Anwendungen",
+          "content": "Entwicklung von Anwendungen für Android mit Hilfe von Android Studios"
+        },
+        {
+          "title": "Spielentwicklung",
+          "content": "Entwicklung von Spiele und Andwendungen mit Hilfe von Unity3D"
+        },
+        {
+          "title": "Multithreading",
+          "content": "Entwicklung von SpiGute Kenntnisse der Parallelisierug von Prozessen"
+        }
+      ]
+    },
+    {
+      "open": false,
+      "title": "Sprachliche Fähigkeiten",
+      "content": [
+        {
+          "title": "Spanisch",
+          "content": "Muttersprache"
+        },
+        {
+          "title": "Englisch",
+          "content": "C1 Niveau"
+        },
+        {
+          "title": "Deutsch",
+          "content": "C1 Niveau"
         }
       ]
     }

@@ -2,17 +2,20 @@
   <!--Header begin-->
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <p class="centered">Wilkommen</p>
+      <h1 class="centered">{{getUsers.name}} {{getUsers.last}}</h1>
+      <p class="centered" id="summary">Ich bin ein Informatik Student an der Hochschule Trier fast am Ende meines Studiums. Ich programmiere schon seit fast
+        5 Jahre und interesiere mich über die Entwicklung von Spiele, sowie Web-Entwicklung und 3D basierte Web-Anwendungen.
+      </p>
     </div>
     <div class="panel-body">
-      <h3 class="centered">{{getUsers.name}} {{getUsers.last}}</h3>
+
     </div>
     <!--Header end-->
 
-    <!--Button begin-->
 
-    <div ng-controller="uiCtrl" class="centered">
-
+    <!--uiCtrl begin-->
+    <div ng-controller="uiCtrl" class="centered" id="backgroundColor">
+      <!--Button begin-->
       <div class="btn-group">
         <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'">Information</label>
         <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" ng-click="testRequest()">Sprachen</label>
@@ -21,34 +24,47 @@
       <!--Button end-->
       <div ng-if='radioModel === "Left";'>
         <!--Accordion begin-->
-          <uib-accordion>
-            <div uib-accordion-group class="panel-default" ng-repeat="group in groups" is-open="group.open">
-              <uib-accordion-heading ng-click="group.open = !group.open">
-                <div class="centered">
-                  {{group.title}}
-                  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': group.open, 'glyphicon-chevron-right': !group.open}"></i>
-                </div>
-              </uib-accordion-heading>
-              <table>
-                <tr ng-repeat="cont in group.content">
-                  <td id="leftTableRow">{{cont.title}}</td>
-                  <td>{{cont.content}}</td>
-                </tr>
-              </table>
-            </div>
-          </uib-accordion>
-
+        <h1>Information</h1>
+        <p>Hier finden Sie übliche Informationen über meine Person</p>
+        <uib-accordion>
+          <div uib-accordion-group class="panel-default" ng-repeat="group in groups" is-open="group.open">
+            <uib-accordion-heading ng-click="group.open = !group.open">
+              <div class="centered">
+                {{group.title}}
+                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': group.open, 'glyphicon-chevron-right': !group.open}"></i>
+              </div>
+            </uib-accordion-heading>
+            <table>
+              <tr ng-repeat="cont in group.content">
+                <td id="leftTableRow">{{cont.title}}</td>
+                <td>{{cont.content}}</td>
+              </tr>
+            </table>
+          </div>
+        </uib-accordion>
       </div>
+      <!--Accordion end-->
+      <!--D3 begin-->
       <div ng-if='radioModel === "Middle";'>
-        
-          <d3-directive></d3-directive>
-        
-      </div>
-      <div ng-if='radioModel === "Right";'>
-          <unity-directive></unity-directive>
-      </div>
-    </div>
+        <p>Diese Graph zeigt die aktuelle Niveau in die verschiedene Programmieresprachen. Es würde mit Hilfe von D3.js hergestellt</p>
+        <d3-directive></d3-directive>
 
-    <!--Accordion end-->
+      </div>
+      <!--D3 end-->
+      <!--Unity begin-->
+      <div ng-if='radioModel === "Right";'>
+        <h1>Projekte</h1>
+        <p class="paragraph">Hier sind alle die Projekte, die ich in die vergangene Jahre an der Hochschule, sowie meine eigene Projekte, gemacht
+          habe. Es kann ein bisschen dauern, UnityLoader muss zuerst geladet werden, danach sollte die Web-Seite problemlos
+          funktionieren.
+        </p>
+        <p>
+        </p>
+        <!--<unity-directive></unity-directive>-->
+      </div>
+      <!--D3 end-->
+      <!--uiCtrl-->
+
+
+    </div>
   </div>
-</div>
