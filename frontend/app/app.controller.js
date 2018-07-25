@@ -29,26 +29,33 @@
 
     })
     .controller("uiCtrl", function ($scope, commands, socket) {
+
       $scope.oneAtATime = true;
-
-      $scope.commands = commands;
-
+      $scope.activeModule = 0;
+      $scope.unityAccordion = false;
+      $scope.groups = "";
       $scope.radioModel = "Left";
 
-      $scope.unityAccordion = false;
+      $scope.commands = commands;
+      $scope.setActiveModule = setActiveModule;
 
+      /////////
 
-      $scope.groups = "";
+      init();
 
-      $scope.commands.requestData().then(reply => {
+      //////////
 
-        $scope.$apply(() => {
+      function init() {
+        $scope.commands.requestData().then(reply => {
+          $scope.$apply(() => {
+            $scope.groups = reply.groups;
+          });
+        });
+      }
 
-          $scope.groups = reply.groups;
-
-        })
-
-      });
+      function setActiveModule(module) {
+        $scope.activeModule = module;
+      }
 
     });
 })();

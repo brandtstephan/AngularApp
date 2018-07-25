@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container" style="height:100%;">
   <!--Header begin-->
-  <div class="panel panel-primary">
+  <div class="panel panel-primary" style="margin-top:2.5%; min-height:93%;">
     <div class="panel-heading">
       <h1 class="centered">{{getUsers.name}} {{getUsers.last}}</h1>
       <p class="centered" id="summary">Ich bin ein Informatik Student an der Hochschule Trier fast am Ende meines Studiums. Ich programmiere schon seit fast
@@ -16,11 +16,37 @@
     <!--uiCtrl begin-->
     <div ng-controller="uiCtrl" class="centered" id="backgroundColor">
       <!--Button begin-->
-      <div class="btn-group">
+      <div style="background-color:#444;height:55px;width:100%;margin-top:-30px;">
+        <!-- style="border-bottom: 2px solid {{activeModule===0?'#888':'inherit'}}" -->
+        <button class="custom-button" 
+                ng-model="radioModel" 
+                uib-btn-radio="'Left'" 
+                ng-click="setActiveModule(0)">
+                <span>Information</span>
+                <div ng-show="activeModule===0" class="button-bottom-line"></div>
+        </button>
+
+        <button class="custom-button" 
+                ng-model="radioModel" 
+                uib-btn-radio="'Middle'" 
+                ng-click="testRequest();setActiveModule(1);">
+                <span>Sprachen</span>
+                <div ng-show="activeModule===1" class="button-bottom-line"></div>
+        </button>
+
+        <button class="custom-button" 
+                ng-model="radioModel" 
+                uib-btn-radio="'Right'" 
+                ng-click="setActiveModule(2)">
+                <span>Projekte</span>
+                <div ng-show="activeModule===2" class="button-bottom-line"></div>
+        </button>
+      </div>
+      <!-- <div class="btn-group">
         <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'">Information</label>
         <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Middle'" ng-click="testRequest()">Sprachen</label>
         <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'">Projekte</label>
-      </div>
+      </div> -->
       <!--Button end-->
       <div ng-if='radioModel === "Left";'>
         <!--Accordion begin-->

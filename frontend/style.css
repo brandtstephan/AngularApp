@@ -1,5 +1,28 @@
 body{
   font-family: 'Roboto';
+  height: 100%;
+}
+
+.custom-button {
+  position:relative;
+  height: 100%;
+  border-style: none;
+  width: 100px;
+  margin: 0 -1px;
+  background-color: #444;
+  color: #FFF;
+}
+.custom-button:hover {
+  background-color: #222;
+}
+
+.button-bottom-line {
+  top:51px;
+  width:86%;
+  float:bottom;
+  height:4px;
+  background:#FFF;
+  position:absolute;
 }
 
 h1{
@@ -9,7 +32,7 @@ h1{
   padding-bottom: 20px;
 }
 .infos{
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 }
 
 table tr td:nth-child(2) {
@@ -85,7 +108,7 @@ table {
 
 /* General website padding*/
 .panel-default{
-  padding-bottom:25px;
+  /*padding-bottom:25px;*/
   background-color: rgb(204,209,209);
 }
 
@@ -97,6 +120,7 @@ table {
 
 /* General background color for the website*/
 .root-view, html{
+  height: 100%;
   background-color:#556;
   background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
     linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
@@ -124,6 +148,19 @@ table {
 
 .panel-default > .panel-heading{
   color: white;
+  /*background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#242424 25%, #222222 25%, #222222 50%, transparent 50%, transparent 75%, #242424 75%, #242424);*/
+  background-color: #444;
+  background-size: 20px 20px;
+}
+
+.panel-default > .panel-heading:hover{
+  color: white;
   background:
     linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
@@ -131,19 +168,13 @@ table {
     linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
     linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
     linear-gradient(#242424 25%, #222222 25%, #222222 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-  background-color: #131313;
-  background-size: 20px 20px;
-}
-
-.panel-default > .panel-heading:hover{
-  color: white;
-  background:
+  /*background:
     linear-gradient(27deg, #444141 5px, transparent 5px) 0 5px,
     linear-gradient(207deg, #444141 5px, transparent 5px) 10px 0px,
     linear-gradient(27deg, #2C2A01 5px, transparent 5px) 0px 10px,
     linear-gradient(207deg, #2C2A01 5px, transparent 5px) 10px 5px,
     linear-gradient(90deg, #292929 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);*/
   background-color: #131313;
   background-size: 20px 20px;
 }
