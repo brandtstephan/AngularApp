@@ -12,7 +12,7 @@
         templateUrl: "app/unity-template.html",
 
         link: function (scope, element, attrs) {
-          var gameInstance = UnityLoader.instantiate("gameContainer", "unity/Build/UnityPackageManager.json", { onProgress: UnityProgress });
+          window.gameInstance = UnityLoader.instantiate("gameContainer", "unity/Build/UnityPackageManager.json", { onProgress: UnityProgress });
         }
       };
     });

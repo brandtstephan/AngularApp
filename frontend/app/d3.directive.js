@@ -13,17 +13,27 @@
 
                 link: function (scope, element, attrs) {
                     var data = [
-                        { name: "Javascript", value: "0.6" },
-                        { name: "Java", value: "0.7" },
-                        { name: "C++", value: "0.3" },
-                        { name: "HTML", value: "0.5" },
-                        { name: "CSS", value: "0.5" },
-                        { name: "Python", value: "0.5" },
-                        { name: "C#", value: "0.5" }
+                        { name: "Javascript", value: "4.3" },
+                        { name: "Python", value: "3" },
+                        { name: "C++", value: "2.3" },
+                        { name: "HTML", value: "4" },
+                        { name: "CSS", value: "3.5" },
+                        { name: "Java", value: "4.8" },
+                        { name: "C#", value: "4.2" }
                     ];
 
+                    var names = [
+                        { name: "Newcomer" },
+                        { name: "Beginner" },
+                        { name: "Apprentice" },
+                        { name: "Junior" },
+                        { name: "Senior" },
+                        { name: "Master" },
+                        { name: "Guru" }
+                    ]
+
                     var svg = d3.select("svg"),
-                        margin = { top: 20, right: 20, bottom: 30, left: 40 },
+                        margin = { top: 20, right: 20, bottom: 30, left: 60 },
                         width = +svg.attr("width") - margin.left - margin.right,
                         height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -47,10 +57,13 @@
                     );
                     y.domain([
                         0,
-                        d3.max(data, function (d) {
-                            return "1";
-                        })
-                    ]);
+                        data.length - 1
+                    ])
+
+                    var yAxis = d3.axisLeft(y).tickFormat(function (d) {
+                        console.log(d);
+                        return names[d] ? names[d].name : "";
+                    });
 
                     g.append("g")
                         .attr("class", "axis axis--x")
@@ -59,13 +72,17 @@
 
                     g.append("g")
                         .attr("class", "axis axis--y")
-                        .call(d3.axisLeft(y).ticks(10, "%"))
+                        .call(yAxis)
                         .append("text")
                         .attr("transform", "rotate(-90)")
                         .attr("y", 6)
                         .attr("dy", "0.71em")
                         .attr("text-anchor", "end")
                         .text("Frequency");
+
+
+
+
 
                     g.selectAll("#bar")
                         .data(data)

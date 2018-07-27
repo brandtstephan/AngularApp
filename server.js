@@ -1,4 +1,4 @@
-(function() {
+(function () {
   "use strict";
   const express = require("express");
   const app = express();
@@ -11,6 +11,7 @@
   console.log(commands);
 
   app.use(express.static(__dirname + "/frontend"));
+  app.use(express.static(__dirname + "/frontend/app/unity/TemplateData"));
 
   io.sockets.on("connection", socket => {
     _.each(commands, (command, id) => {

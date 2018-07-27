@@ -18,28 +18,19 @@
       <!--Button begin-->
       <div style="background-color:#444;height:55px;width:100%;margin-top:-30px;">
         <!-- style="border-bottom: 2px solid {{activeModule===0?'#888':'inherit'}}" -->
-        <button class="custom-button" 
-                ng-model="radioModel" 
-                uib-btn-radio="'Left'" 
-                ng-click="setActiveModule(0)">
-                <span>Information</span>
-                <div ng-show="activeModule===0" class="button-bottom-line"></div>
+        <button class="custom-button" ng-model="radioModel" uib-btn-radio="'Left'" ng-click="setActiveModule(0)">
+          <span>Information</span>
+          <div ng-show="activeModule===0" class="button-bottom-line"></div>
         </button>
 
-        <button class="custom-button" 
-                ng-model="radioModel" 
-                uib-btn-radio="'Middle'" 
-                ng-click="testRequest();setActiveModule(1);">
-                <span>Sprachen</span>
-                <div ng-show="activeModule===1" class="button-bottom-line"></div>
+        <button class="custom-button" ng-model="radioModel" uib-btn-radio="'Middle'" ng-click="setActiveModule(1);">
+          <span>Sprachen</span>
+          <div ng-show="activeModule===1" class="button-bottom-line"></div>
         </button>
 
-        <button class="custom-button" 
-                ng-model="radioModel" 
-                uib-btn-radio="'Right'" 
-                ng-click="setActiveModule(2)">
-                <span>Projekte</span>
-                <div ng-show="activeModule===2" class="button-bottom-line"></div>
+        <button class="custom-button" ng-model="radioModel" uib-btn-radio="'Right'" ng-click="setActiveModule(2)">
+          <span>Projekte</span>
+          <div ng-show="activeModule===2" class="button-bottom-line"></div>
         </button>
       </div>
       <!-- <div class="btn-group">
@@ -48,7 +39,7 @@
         <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Right'">Projekte</label>
       </div> -->
       <!--Button end-->
-      <div ng-if='radioModel === "Left";'>
+      <div ng-if='activeModule === 0;'>
         <!--Accordion begin-->
         <h1>Information</h1>
         <p class="infos">Hier finden Sie übliche Informationen über meine Person</p>
@@ -71,15 +62,15 @@
       </div>
       <!--Accordion end-->
       <!--D3 begin-->
-      <div ng-if='radioModel === "Middle";'>
+      <div ng-if='activeModule === 1;'>
         <h1>Programmiersprachen</h1>
         <p class="infos">Diese Graph zeigt die aktuelle Niveau in die verschiedene Programmieresprachen. Es würde mit Hilfe von D3.js hergestellt</p>
         <d3-directive></d3-directive>
 
       </div>
       <!--D3 end-->
-      <!--Unity begin-->
-      <div ng-if='radioModel === "Right";'>
+
+      <div ng-if='activeModule === 2;'>
         <h1>Projekte</h1>
         <p class="paragraph infos">Hier sind alle die Projekte, die ich in die vergangene Jahre an der Hochschule, sowie meine eigene Projekte, gemacht
           habe. Es kann ein bisschen dauern, UnityLoader muss zuerst geladet werden, danach sollte die Web-Seite problemlos
@@ -100,7 +91,10 @@
           <a href="https://github.com/codeMasta64/UnityOcclusionCulling">Unity3D Projekt</a>
         </p>
 
-        <unity-directive class="unity-css"></unity-directive>
+        <div>
+          <button ng-model="radioModel" ng-click="setActiveModule(3);">Demo</button>
+          <div ng-show="activeModule===3"></div>
+        </div>
 
         <h3>
           2. Rubiks Cube für die PSVita
@@ -119,7 +113,11 @@
           <a href="https://github.com/codeMasta64/MapVisualizationTrier">Trier Karte</a>
         </p>
       </div>
-      <!--D3 end-->
+      <!--Unity begin-->
+      <div ng-if='activeModule===3;'>
+        <unity-directive></unity-directive>
+      </div>
+
       <!--uiCtrl-->
 
 

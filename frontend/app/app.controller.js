@@ -32,7 +32,7 @@
 
       $scope.oneAtATime = true;
       $scope.activeModule = 0;
-      $scope.unityAccordion = false;
+      $scope.iframeValue = false;
       $scope.groups = "";
       $scope.radioModel = "Left";
 
@@ -52,9 +52,18 @@
           });
         });
       }
-
       function setActiveModule(module) {
         $scope.activeModule = module;
+      }
+
+      function unloadUnity(module) {
+        $scope.iframeValue = module;
+        var frame = document.getElementById("unityFrame");
+        if (!$scope.iframeValue) {
+          frame.parentNode.removeChild(frame);
+        } else {
+          var frame
+        }
       }
 
     });
