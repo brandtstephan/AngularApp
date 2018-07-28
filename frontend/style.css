@@ -40,11 +40,15 @@ table tr td:nth-child(2) {
   text-align: right;
   padding-left: 35%;
   padding-right: 5%;
+  height:60px;
 }
 
 table tr td:nth-child(1) {
   padding-left: 5%;
-
+  padding-right: 10%;
+  margin: 50px;
+  width: 25%;
+  height:60px;
 }
 table tr{
   border-bottom: solid #B8BFBF;
@@ -126,6 +130,9 @@ table {
 }
 
 /* General background color for the website*/
+.root-view{
+  overflow-y: scroll;
+}
 .root-view, html{
   height: 100%;
   background-color:#556;

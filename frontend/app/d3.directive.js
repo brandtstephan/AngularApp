@@ -13,13 +13,13 @@
 
                 link: function (scope, element, attrs) {
                     var data = [
-                        { name: "Javascript", value: "4.3" },
-                        { name: "Python", value: "3" },
-                        { name: "C++", value: "2.3" },
-                        { name: "HTML", value: "4" },
-                        { name: "CSS", value: "3.5" },
-                        { name: "Java", value: "4.8" },
-                        { name: "C#", value: "4.2" }
+                        { name: "Javascript", value: "2.8" },
+                        { name: "Python", value: "1.5" },
+                        { name: "C++", value: "0.8" },
+                        { name: "HTML", value: "2.5" },
+                        { name: "CSS", value: "2" },
+                        { name: "Java", value: "3.3" },
+                        { name: "C#", value: "2.7" }
                     ];
 
                     var names = [
