@@ -66,8 +66,8 @@ table {
 .centered {
   text-align: center;
 }
-.paragraph, .p-space,.pp{
-  margin:50px;
+.p-space,.pp{
+  margin:30px;
   text-align: left;
 }
 

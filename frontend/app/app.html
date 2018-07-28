@@ -42,7 +42,7 @@
       <div ng-if='activeModule === 0;'>
         <!--Accordion begin-->
         <h1>Information</h1>
-        <p class="infos">Hier finden Sie übliche Informationen über meine Person</p>
+        <p class="infos" >Hier finden Sie übliche Informationen über meine Person</p>
         <uib-accordion>
           <div uib-accordion-group class="panel-default" ng-repeat="group in groups" is-open="group.open">
             <uib-accordion-heading ng-click="group.open = !group.open">
@@ -69,13 +69,13 @@
 
       </div>
       <!--D3 end-->
-
+      <!--Projekte begin-->
       <div ng-if='activeModule === 2;'>
         <h1>Projekte</h1>
-        <p class="paragraph infos">Hier sind alle die Projekte, die ich in die vergangene Jahre an der Hochschule, sowie meine eigene Projekte, gemacht
-          habe. Es kann ein bisschen dauern, UnityLoader muss zuerst geladet werden, danach sollte die Web-Seite problemlos
-          funktionieren. Au­ßer­dem sind alle die github links dabei mit entsprechender Dokumentation.
+        <p class="infos" >Hier sind alle die Projekte, die ich in die vergangene Jahre an der Hochschule, sowie meine eigene Projekte, gemacht
+          habe. Au­ßer­dem sind alle die github links dabei mit entsprechender Dokumentation.
         </p>
+        <!--Occlusion Culling begin-->
         <h3>
           1. Occlusion Culling in Unity3D
         </h3>
@@ -83,7 +83,7 @@
           um effizient viele Objekte erzeugen zu können ohne die gesamte Performance zu beschädigen.
         </p>
         <p class="p-space">
-          Man rendert nur solche Objekte, die gerade gebraucht werden, d.h, nur solche, die vor die Kamera stehen. Damit spar man Speicher,
+          Man rendert nur solche Objekte, die gerade gebraucht werden, d.h, nur solche, die vor die Kamera stehen. Damit spart man Speicher,
           sodass unser Spiel besser laufen kann.
         </p>
         <p class="p-space">
@@ -92,35 +92,73 @@
         </p>
 
         <div>
-          <button ng-model="radioModel" ng-click="setActiveModule(3);">Demo</button>
+          <button ng-model="radioModel" ng-click="setActiveModule(3);" style="background-color:#444; color:floralwhite;" >Demo</button>
           <div ng-show="activeModule===3"></div>
         </div>
-
+        <div style="padding-bottom: 50px; border-bottom: solid #B8BFBF; margin:50px;">
+          <img src="../Images/OcclusionCulling.PNG" alt="Preview Occlusion" style="width:60%; height: 60%;"></img> 
+        </div>
+        <!--Occlusion Culling end-->
+        <!--Rubiks Cube begin-->
         <h3>
           2. Rubiks Cube für die PSVita
         </h3>
-        <p class="pp"> Hier ist ein klein Spiel für die PSVita. Um es ausführen zu können, braucht man die Sony API im Rechner installiert
-          zu haben, Leider ist nicht einfach, die Lizenz dafür zu bekommen, trotzdem hier kann man sich die Projekt im github
+        <p class="p-space" style="padding-bottom:25px;"> Hier ist ein klein Spiel für die PSVita. Um es ausführen zu können, braucht man die Sony API im Rechner installiert
+          zu haben und ein PSVita, Leider ist nicht einfach, die Lizenz dafür zu bekommen, trotzdem hier kann man sich die Projekt im github
           anschauen:
           <a href="https://github.com/codeMasta64/RubiksCubePSVita">Rubiks Cube</a>
         </p>
-
+        <div style="padding-bottom: 50px; border-bottom: solid #B8BFBF; margin:50px;">
+          <img src="../Images/rubiks.png" alt="Preview Rubiks" style="width:60%; height:60%;"></img>
+        </div>
+        <!--Rubiks Cube end-->
+        <!--GPSTRACKER begin-->
         <h3>
           3. Web-Anwendungen für Bezirk Trier und Umgebung
         </h3>
-        <p class="pp"> Eine kleine modulare Web-Anwendung mit RESTful API für die Backend. Mit Hilfe von Leaflet (Open Source Karteanzeige)
-          kann man durch die Region navigieren und sich die Höhenprofil anschauen
+        <p class="p-space" style="padding-bottom:25px;"> Eine kleine modulare Web-Anwendung mit RESTful API für die Backend. Mit Hilfe von Leaflet (Open Source Karteanzeige)
+          kann man durch die Region navigieren und sich die Höhenprofil anschauen. </p>
+        <p class="p-space">Diese Web-Anwendung beinhaltet verschieden wichtige APIs so wie Best-Practices. Es wurde Modular mit Hilfe von Common.js konstruiert, die Backend benutzt RESTful API für die Strukturierung von Serveranfragen und Leaflet als Open-Source Karteanzeige. Github:
           <a href="https://github.com/codeMasta64/MapVisualizationTrier">Trier Karte</a>
         </p>
+          <div style="padding-bottom: 50px; border-bottom: solid #B8BFBF; margin:50px;">
+          <img src="../Images/gpstracktrier.png" alt="Preview Maps" style="width:60%; height:60%;"></img>
+        </div>
+        <!--GPSTRACKER end-->
+        <!--Google Chrome begin-->
+        <h3>
+          4. Google Chrome Erweiterung: Zeitmessung für die Browser
+        </h3>
+        <p class="p-space" style="padding-bottom:25px;"> Diese kleine Erweiterung zeigt uns, wie viel Zeit man in die verschiedene Webseite investiert. Es war ein lustige Experiment. Obwohl es ein paar Bugs hat, funktioniert einwandfrei.</p>
+        <p class="p-space">
+          Diese Erweiterung wurde mit Hilfe von die Google Developer API und Chart.js gemacht. Github:
+          <a href="https://github.com/codeMasta64/GoogleChromeExtension">Zeitmessung Erweiterung</a>
+        </p>
+        <div style="padding-bottom: 50px; border-bottom: solid #B8BFBF; margin:50px;">
+          <img src="../Images/sandclock.png" alt="Preview Extension" style="width:40%; height:40%;"></img>
+        </div>
+        <!--Google Chrome end-->
+        <!--Angular App begin-->
+        <h3>
+          5. Angular.js: Lebenslauf als Web-Anwendung
+        </h3>
+        <p class="p-space"> Zum Schluss ist diese Webseit auch als Open-Source zu Verfügung.</p>
+        <p class="p-space" style="padding-bottom:25px;">
+          Dahinte sind viele Technologien, die heutezutage relevant sind. Node Package Manager und Node sind die Gründsteine des Servers, sie verwalten alle die Abhängigkeiten (Dependencies) und Bower verwaltet die Abhängigkeiten der Client. Für die Client habe ich Angular.js für DOM-Manipulation benutzt und D3.js für die graphische Darstellung von Daten. Im Backend wurde Express für die Server benutzt, sowie Socket.io für die Abfragen und Abschicken von Daten, die die Client benutzt.  Github:
+          <a href="https://github.com/codeMasta64/AngularApp">AngularApp</a>
+        </p>
+        <!--Angular App end-->
       </div>
+      <!--Projekte end-->
       <!--Unity begin-->
       <div ng-if='activeModule===3;'>
-        <unity-directive></unity-directive>
+        <div  style="margin-top:7%; margin-bottom: 5%;">
+          <h1 class="centerd">Occlusion Culling Demo</h1>
+          <p class="centered infos"> Diese Anwendung würde ursprünglich nicht für die Ausführung innerhalb eines Browsers gedacht, bitte Warten Sie eine Augenblick, Unity muss zuerst laden!</p>
+         <unity-directive></unity-directive>
+        </div>
       </div>
-
       <!--uiCtrl-->
-
-
     </div>
   </div>
 </div>
