@@ -22,17 +22,17 @@
       <div style="background-color:#444;height:55px;width:100%;margin-top:-30px;">
         <!-- style="border-bottom: 2px solid {{activeModule===0?'#888':'inherit'}}" -->
         <button class="custom-button" ng-model="radioModel" uib-btn-radio="'Left'" ng-click="setActiveModule(0)">
-          <span>Information</span>
+          <span>{{lang.infoTitle}}</span>
           <div ng-show="activeModule===0" class="button-bottom-line"></div>
         </button>
 
         <button class="custom-button" ng-model="radioModel" uib-btn-radio="'Middle'" ng-click="setActiveModule(1);">
-          <span>Sprachen</span>
+          <span>{{lang.langTitle}}</span>
           <div ng-show="activeModule===1" class="button-bottom-line"></div>
         </button>
 
         <button class="custom-button" ng-model="radioModel" uib-btn-radio="'Right'" ng-click="setActiveModule(2)">
-          <span>Projekte</span>
+          <span>{{lang.projectsTitle}}</span>
           <div ng-show="activeModule===2" class="button-bottom-line"></div>
         </button>
       </div>
@@ -44,7 +44,7 @@
       <!--Button end-->
       <div ng-if='activeModule === 0;'>
         <!--Accordion begin-->
-        <h1>Information</h1>
+        <h1>{{lang.infoTitle}}</h1>
         <p class="infos" >Hier finden Sie übliche Informationen über meine Person</p>
         <uib-accordion>
           <div uib-accordion-group class="panel-default" ng-repeat="group in groups" is-open="group.open">
@@ -66,7 +66,7 @@
       <!--Accordion end-->
       <!--D3 begin-->
       <div ng-if='activeModule === 1;'>
-        <h1>Programmiersprachen</h1>
+        <h1>{{lang.langSubtitle}}</h1>
         <p class="infos">Diese Graph zeigt die aktuelle Niveau in die verschiedene Programmieresprachen. Es würde mit Hilfe von D3.js hergestellt</p>
         <d3-directive></d3-directive>
 
@@ -74,7 +74,7 @@
       <!--D3 end-->
       <!--Projekte begin-->
       <div ng-if='activeModule === 2;'>
-        <h1>Projekte</h1>
+        <h1>{{lang.projectsTitle}}</h1>
         <p class="infos" >Hier sind alle die Projekte, die ich in die vergangene Jahre an der Hochschule, sowie meine eigene Projekte, gemacht
           habe. Au­ßer­dem sind alle die github links dabei mit entsprechender Dokumentation.
         </p>
