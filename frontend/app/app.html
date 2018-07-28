@@ -1,11 +1,14 @@
-<div class="container" style="height:100%;">
+<div class="container" style="height:100%;" ng-controller="uiCtrl">
   <!--Header begin-->
-  <div class="panel panel-primary" style="margin-top:2.5%; min-height:93%;">
+  <div class="panel panel-primary" style="margin-top:2.5%; min-height:93%; position:relative">
+    <div class="btn-group" style="position:absolute;right:-5px;">
+      <button class="btn btn-default" ng-click="changeLanguage('en')">english</button>
+      <button class="btn btn-default" ng-click="changeLanguage('de')">deutsch</button>
+      <button class="btn btn-default" ng-click="changeLanguage('es')">espanol</button>
+    </div>
     <div class="panel-heading">
       <h1 class="centered">{{getUsers.name}} {{getUsers.last}}</h1>
-      <p class="centered" id="summary">Ich bin ein Informatik Student an der Hochschule Trier fast am Ende meines Studiums. Ich programmiere schon seit fast
-        5 Jahre und interesiere mich über die Entwicklung von Spiele, sowie Web-Entwicklung und 3D basierte Web-Anwendungen.
-      </p>
+      <p class="centered" id="summary">{{lang.info}}</p>
     </div>
     <div class="panel-body">
 
@@ -14,7 +17,7 @@
 
 
     <!--uiCtrl begin-->
-    <div ng-controller="uiCtrl" class="centered" id="backgroundColor">
+    <div class="centered" id="backgroundColor">
       <!--Button begin-->
       <div style="background-color:#444;height:55px;width:100%;margin-top:-30px;">
         <!-- style="border-bottom: 2px solid {{activeModule===0?'#888':'inherit'}}" -->

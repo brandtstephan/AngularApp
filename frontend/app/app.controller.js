@@ -28,22 +28,30 @@
       $scope.getUsers = User.getUsers();
 
     })
-    .controller("uiCtrl", function ($scope, commands, socket) {
+    .controller("uiCtrl", function ($scope, commands, socket, languageService) {
 
       $scope.oneAtATime = true;
       $scope.activeModule = 0;
       $scope.iframeValue = false;
       $scope.groups = "";
       $scope.radioModel = "Left";
+      $scope.selectedLanguage = 'en';
+      $scope.lang = languageService.getDataByLanguage($scope.selectedLanguage);
 
       $scope.commands = commands;
       $scope.setActiveModule = setActiveModule;
+      $scope.changeLanguage = changeLanguage;
 
       /////////
 
       init();
 
       //////////
+
+      function changeLanguage(lang) {
+        $scope.selectedLanguage = lang;
+        $scope.lang = languageService.getDataByLanguage($scope.selectedLanguage);
+      }
 
       function init() {
         $scope.commands.requestData().then(reply => {
