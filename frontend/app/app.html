@@ -2,9 +2,9 @@
   <!--Header begin-->
   <div class="panel panel-primary" style="margin-top:2.5%; min-height:93%; position:relative">
     <div class="btn-group" style="position:absolute;right:-5px;">
-      <button class="btn btn-default" ng-click="changeLanguage('en')">english</button>
-      <button class="btn btn-default" ng-click="changeLanguage('de')">deutsch</button>
-      <button class="btn btn-default" ng-click="changeLanguage('es')">espanol</button>
+      <button class="btn btn-default" ng-click="changeLanguage('en')" style="background-color:{{selectedLanguage==='en'?'#AAA':'#FFF';}}">english</button>
+      <button class="btn btn-default" ng-click="changeLanguage('de')" style="background-color:{{selectedLanguage==='de'?'#AAA':'#FFF';}}">deutsch</button>
+      <button class="btn btn-default" ng-click="changeLanguage('es')" style="background-color:{{selectedLanguage==='es'?'#AAA':'#FFF';}}">espanol</button>
     </div>
     <div class="panel-heading">
       <h1 class="centered">{{getUsers.name}} {{getUsers.last}}</h1>
