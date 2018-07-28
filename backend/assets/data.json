@@ -2,121 +2,121 @@
   "groups": [
     {
       "open": false,
-      "title": "Persönliche Information",
+      "title": "personalInfo",
       "content": [
         {
-          "title": "Adresse",
-          "content": "Kochstrasse 5, 54290 Trier"
+          "title": "adressTitle",
+          "content": "adressContent"
         },
         {
-          "title": "Geburtsdatum",
-          "content": "12.07.1993 in Caracas, Venezuela"
+          "title": "birthTitle",
+          "content": "birthContent"
         },
         {
-          "title": "Telefon",
-          "content": "+49 17631185631"
+          "title": "telefonTitle",
+          "content": "telefonContent"
         },
         {
-          "title": "Email",
-          "content": "stephan.alexander.brandt@gmail.com"
+          "title": "emailTitle",
+          "content": "emailContent"
         },
         {
-          "title": "Staatsangehörigkeit",
-          "content": "Deutsch"
+          "title": "nationalityTitle",
+          "content": "nationalityContent"
         }
       ]
     },
     {
       "open": false,
-      "title": "Bildung",
+      "title": "formationTitle",
       "content": [
         {
-          "title": "2014-Jetzt",
-          "content": "Hochschulebildung an der Hochschule Trier Fachrichtung: Informatik. Schwerpunkt: Digitale Medien und Spiele"
+          "title": "jetztTitle",
+          "content": "jetztContent"
         },
         {
-          "title": "2013-2014",
-          "content": "Internationale Studienkolleg an der Hochschule Kaiserslautern Schwerpunkt: Naturwissenschaft"
+          "title": "kollegeTitle",
+          "content": "kollegeContent"
         },
         {
-          "title": "2011-2012",
-          "content": "Sprachschule Schwerpunkt: Deutsch als Fremdsprache"
+          "title": "sprachTitle",
+          "content": "sprachContent"
         },
         {
-          "title": "2000-2011",
-          "content": "Primar-und Sekundarschule an der Champagnat Schule in Caracas, Venezuela"
+          "title": "schoolTitle",
+          "content": "schoolContent"
         }
       ]
     },
     {
       "open": false,
-      "title": "Technische Details",
+      "title": "detailsTitle",
       "content": [
         {
-          "title": "Programmiersprachen",
-          "content": "Java, C++, C#, JavaScript, HTML, CSS, Python"
+          "title": "programmTitle",
+          "content": "programmContent"
         },
         {
-          "title": "Werkzeuge",
-          "content": "Android Studios, Unity3D, Node.js und npm, Angular.js, D3.js, P5.js , Repository, Adobe XD, Bash für Linux, Verschidene IDEs"
+          "title": "toolsTitle",
+          "content": "toolsContent"
         }
       ]
     },
     {
       "open": false,
-      "title": "Berufserfahrung",
+      "title": "workTitle",
       "content": [
         {
-          "title": "2016-2017",
-          "content": "Eiskaffe Christis Trier: Verkäufer."
+          "title": "currentTitle",
+          "content": "currentContent"
         },
         {
-          "title": "2012-2014",
-          "content": "Kaffe Nr. 15 Kaiserslautern: Kellner und Barkeeper."
+          "title": "lastTitle",
+          "content": "lastContent"
         }
       ]
     },
     {
       "open": false,
-      "title": "Fähigkeiten",
+      "title": "abilityTitle",
       "content": [
         {
-          "title": "Webentwicklung",
-          "content": "Client mit LESS nach CSS; backend mit Express, Node.js und npm; modulare Entwicklung mit Hilfe von Common.js und RESTful API; entwicklung von Web-Anwendung mit Hilfe von Angular.js für die Frontend und Express Sockets in der Backend."
+          "title": "webTitle",
+          "content": "webContent"
         },
         {
-          "title": "Google Chrome Erweiterungen",
-          "content": "Entwicklung von Google Chrome Erweiterungen"
+          "title": "googleTitle",
+          "content": "googleContent"
         },
         {
-          "title": "Entwicklung mobiler Anwendungen",
-          "content": "Entwicklung von Anwendungen für Android mit Hilfe von Android Studios"
+          "title": "androidTitle",
+          "content": "androidContent"
         },
         {
-          "title": "Spielentwicklung",
-          "content": "Entwicklung von Spiele und Andwendungen mit Hilfe von Unity3D"
+          "title": "androidTitle",
+          "content": "gameContent"
         },
         {
-          "title": "Multithreading",
-          "content": "Gute Kenntnisse der Parallelisierug von Prozessen"
+          "title": "threadingTitle",
+          "content": "threadingContent"
         }
       ]
     },
     {
       "open": false,
-      "title": "Sprachliche Fähigkeiten",
+      "title": "languageTitle",
       "content": [
         {
-          "title": "Spanisch",
-          "content": "Muttersprache"
+          "title": "spanishTitle",
+          "content": "spanishContent"
         },
         {
-          "title": "Englisch",
-          "content": "C1 Niveau"
+          "title": "englishTitle",
+          "content": "englishContent"
         },
         {
-          "title": "Deutsch",
-          "content": "C1 Niveau"
+          "title": "germanTitle",
+          "content": "germanContent"
         }
       ]
     }

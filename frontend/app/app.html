@@ -45,19 +45,19 @@
       <div ng-if='activeModule === 0;'>
         <!--Accordion begin-->
         <h1>{{lang.infoTitle}}</h1>
-        <p class="infos" >Hier finden Sie übliche Informationen über meine Person</p>
+        <p class="infos" >{{lang.infoDescription}}</p>
         <uib-accordion>
           <div uib-accordion-group class="panel-default" ng-repeat="group in groups" is-open="group.open">
             <uib-accordion-heading ng-click="group.open = !group.open">
               <div class="centered">
-                {{group.title}}
+                {{lang[group.title]}}
                 <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': group.open, 'glyphicon-chevron-right': !group.open}"></i>
               </div>
             </uib-accordion-heading>
             <table>
               <tr ng-repeat="cont in group.content">
-                <td>{{cont.title}}</td>
-                <td>{{cont.content}}</td>
+                <td>{{lang[cont.title]}}</td>
+                <td>{{lang[cont.content]}}</td>
               </tr>
             </table>
           </div>
