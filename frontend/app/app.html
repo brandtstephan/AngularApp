@@ -2,9 +2,9 @@
   <!--Header begin-->
   <div class="panel panel-primary" style="margin-top:2.5%; min-height:93%; position:relative">
     <div class="btn-group" style="position:absolute;right:-5px;">
-      <button class="btn btn-default" ng-click="changeLanguage('en')" style="background-color:{{selectedLanguage==='en'?'#AAA':'#FFF';}}">english</button>
-      <button class="btn btn-default" ng-click="changeLanguage('de')" style="background-color:{{selectedLanguage==='de'?'#AAA':'#FFF';}}">deutsch</button>
-      <button class="btn btn-default" ng-click="changeLanguage('es')" style="background-color:{{selectedLanguage==='es'?'#AAA':'#FFF';}}">espanol</button>
+      <button class="btn btn-default" ng-click="changeLanguage('en')" style="border-width:2px;height: 23px; width:38px; background: url(../Images/gb.png);background-color:{{selectedLanguage==='en'?'#AAA':'#FFF';}}"></button>
+      <button class="btn btn-default" ng-click="changeLanguage('de')" style="border-width:2px;height: 23px; width:38px; background: url(../Images/de.png);background-color:{{selectedLanguage==='de'?'#AAA':'#FFF';}}"></button>
+      <button class="btn btn-default" ng-click="changeLanguage('es')" style="border-width:2px;height: 23px; width:38px; background: url(../Images/es.png);background-color:{{selectedLanguage==='es'?'#AAA':'#FFF';}}"></button>
     </div>
     <div class="panel-heading">
       <h1 class="centered">{{getUsers.name}} {{getUsers.last}}</h1>
@@ -20,7 +20,6 @@
     <div class="centered" id="backgroundColor">
       <!--Button begin-->
       <div style="background-color:#444;height:55px;width:100%;margin-top:-30px;">
-        <!-- style="border-bottom: 2px solid {{activeModule===0?'#888':'inherit'}}" -->
         <button class="custom-button" ng-model="radioModel" uib-btn-radio="'Left'" ng-click="setActiveModule(0)">
           <span>{{lang.infoTitle}}</span>
           <div ng-show="activeModule===0" class="button-bottom-line"></div>
@@ -67,7 +66,7 @@
       <!--D3 begin-->
       <div ng-if='activeModule === 1;'>
         <h1>{{lang.langSubtitle}}</h1>
-        <p class="infos">Diese Graph zeigt die aktuelle Niveau in die verschiedene Programmieresprachen. Es würde mit Hilfe von D3.js hergestellt</p>
+        <p class="infos">{{lang.graphParagraph}}</p>
         <d3-directive></d3-directive>
 
       </div>
@@ -75,27 +74,24 @@
       <!--Projekte begin-->
       <div ng-if='activeModule === 2;'>
         <h1>{{lang.projectsTitle}}</h1>
-        <p class="infos" >Hier sind alle die Projekte, die ich in die vergangene Jahre an der Hochschule, sowie meine eigene Projekte, gemacht
-          habe. Au­ßer­dem sind alle die github links dabei mit entsprechender Dokumentation.
+        <p class="infos" >{{lang.projectSubtitle}}
         </p>
         <!--Occlusion Culling begin-->
         <h3>
-          1. Occlusion Culling in Unity3D
+          {{lang.firstProjektTitle}}
         </h3>
-        <p class="p-space"> Die Idee dahinten ist für Optimierungsgründen. Occlusion culling ist ein sehr bekannte und benutzte Technik im Spielentwicklung,
-          um effizient viele Objekte erzeugen zu können ohne die gesamte Performance zu beschädigen.
+        <p class="p-space"> {{lang.firstProjektA}}
         </p>
         <p class="p-space">
-          Man rendert nur solche Objekte, die gerade gebraucht werden, d.h, nur solche, die vor die Kamera stehen. Damit spart man Speicher,
-          sodass unser Spiel besser laufen kann.
+         {{lang.firstProjektB}}
         </p>
         <p class="p-space">
-          Probieren Sie es selber, hier gibt ein kleiner Demo: A S W D sind die Kontroller. Oder besuchen Sie meine github:
-          <a href="https://github.com/codeMasta64/UnityOcclusionCulling">Unity3D Projekt</a>
+         {{lang.firstProjektC}}
+          <a href="https://github.com/codeMasta64/UnityOcclusionCulling">{{lang.linkOcclusion}}</a>
         </p>
 
         <div>
-          <button ng-model="radioModel" ng-click="setActiveModule(3);" style="background-color:#444; color:floralwhite;" >Demo</button>
+          <button ng-model="radioModel" ng-click="setActiveModule(3);" class="demo" >Demo</button>
           <div ng-show="activeModule===3"></div>
         </div>
         <div style="padding-bottom: 50px; border-bottom: solid #B8BFBF; margin:50px;">
@@ -104,12 +100,10 @@
         <!--Occlusion Culling end-->
         <!--Rubiks Cube begin-->
         <h3>
-          2. Rubiks Cube für die PSVita
+          {{lang.secondProjektTitle}}
         </h3>
-        <p class="p-space" style="padding-bottom:25px;"> Hier ist ein klein Spiel für die PSVita. Um es ausführen zu können, braucht man die Sony API im Rechner installiert
-          zu haben und ein PSVita, Leider ist nicht einfach, die Lizenz dafür zu bekommen, trotzdem hier kann man sich die Projekt im github
-          anschauen:
-          <a href="https://github.com/codeMasta64/RubiksCubePSVita">Rubiks Cube</a>
+        <p class="p-space" style="padding-bottom:25px;"> {{lang.secondProjektA}}
+          <a href="https://github.com/codeMasta64/RubiksCubePSVita">{{lang.linkCube}}</a>
         </p>
         <div style="padding-bottom: 50px; border-bottom: solid #B8BFBF; margin:50px;">
           <img src="../Images/rubiks.png" alt="Preview Rubiks" style="width:60%; height:60%;"></img>
@@ -117,12 +111,11 @@
         <!--Rubiks Cube end-->
         <!--GPSTRACKER begin-->
         <h3>
-          3. Web-Anwendungen für Bezirk Trier und Umgebung
+         {{lang.thirdProjektTitle}}
         </h3>
-        <p class="p-space" style="padding-bottom:25px;"> Eine kleine modulare Web-Anwendung mit RESTful API für die Backend. Mit Hilfe von Leaflet (Open Source Karteanzeige)
-          kann man durch die Region navigieren und sich die Höhenprofil anschauen. </p>
-        <p class="p-space">Diese Web-Anwendung beinhaltet verschieden wichtige APIs so wie Best-Practices. Es wurde Modular mit Hilfe von Common.js konstruiert, die Backend benutzt RESTful API für die Strukturierung von Serveranfragen und Leaflet als Open-Source Karteanzeige. Github:
-          <a href="https://github.com/codeMasta64/MapVisualizationTrier">Trier Karte</a>
+        <p class="p-space" style="padding-bottom:25px;">{{lang.thirdProjektA}} </p>
+        <p class="p-space">{{lang.thirdProjektB}}
+          <a href="https://github.com/codeMasta64/MapVisualizationTrier">{{lang.linkMap}}</a>
         </p>
           <div style="padding-bottom: 50px; border-bottom: solid #B8BFBF; margin:50px;">
           <img src="../Images/gpstracktrier.png" alt="Preview Maps" style="width:60%; height:60%;"></img>
@@ -130,12 +123,12 @@
         <!--GPSTRACKER end-->
         <!--Google Chrome begin-->
         <h3>
-          4. Google Chrome Erweiterung: Zeitmessung für die Browser
+         {{lang.forthProjektTitle}}
         </h3>
-        <p class="p-space" style="padding-bottom:25px;"> Diese kleine Erweiterung zeigt uns, wie viel Zeit man in die verschiedene Webseite investiert. Es war ein lustige Experiment. Obwohl es ein paar Bugs hat, funktioniert einwandfrei.</p>
+        <p class="p-space" style="padding-bottom:25px;"> {{lang.forthProjektA}}</p>
         <p class="p-space">
-          Diese Erweiterung wurde mit Hilfe von die Google Developer API und Chart.js gemacht. Github:
-          <a href="https://github.com/codeMasta64/GoogleChromeExtension">Zeitmessung Erweiterung</a>
+          {{lang.forthProjektB}}
+          <a href="https://github.com/codeMasta64/GoogleChromeExtension">{{lang.linkExtension}}</a>
         </p>
         <div style="padding-bottom: 50px; border-bottom: solid #B8BFBF; margin:50px;">
           <img src="../Images/sandclock.png" alt="Preview Extension" style="width:40%; height:40%;"></img>
@@ -143,12 +136,12 @@
         <!--Google Chrome end-->
         <!--Angular App begin-->
         <h3>
-          5. Angular.js: Lebenslauf als Web-Anwendung
+          {{lang.fifthProjektTitle}}
         </h3>
-        <p class="p-space"> Zum Schluss ist diese Webseit auch als Open-Source zu Verfügung.</p>
+        <p class="p-space"> {{lang.fifthProjektA}}</p>
         <p class="p-space" style="padding-bottom:25px;">
-          Dahinten sind viele Technologien, die heutezutage relevant sind. Node Package Manager und Node sind die Gründsteine des Servers, sie verwalten alle die Abhängigkeiten (Dependencies) und Bower verwaltet die Abhängigkeiten der Client. Für die Client habe ich Angular.js für DOM-Manipulation benutzt und D3.js für die graphische Darstellung von Daten. Im Backend wurde Express für die Server benutzt, sowie Socket.io für die Abfragen und Abschicken von Daten, die die Client benutzt.  Github:
-          <a href="https://github.com/codeMasta64/AngularApp">AngularApp</a>
+          {{lang.fifthProjektB}}
+          <a href="https://github.com/codeMasta64/AngularApp">Angular.js</a>
         </p>
         <!--Angular App end-->
       </div>
@@ -157,7 +150,8 @@
       <div ng-if='activeModule===3;'>
         <div  style="margin-top:7%; margin-bottom: 5%;">
           <h1 class="centerd">Occlusion Culling Demo</h1>
-          <p class="centered infos"> Diese Anwendung würde ursprünglich nicht für die Ausführung innerhalb eines Browsers gedacht, bitte Warten Sie eine Augenblick, Unity muss zuerst laden!</p>
+          <p class="centered infos">{{lang.unityDemo}}</p>
+          <p class"p-space">{{lang.unityDemoInfo}}</p>
          <unity-directive></unity-directive>
         </div>
       </div>
