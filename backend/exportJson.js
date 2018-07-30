@@ -3,6 +3,7 @@ const fs = require("fs");
 
 module.exports = class data {
   constructor() {
+    //Parse data from the json and export it
     var content = fs.readFileSync(assetsFolder);
     this.jsonFile = JSON.parse(content);
   }
