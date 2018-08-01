@@ -5,10 +5,6 @@
       "title": "personalInfo",
       "content": [
         {
-          "title": "adressTitle",
-          "content": "adressContent"
-        },
-        {
           "title": "birthTitle",
           "content": "birthContent"
         },

@@ -7,9 +7,9 @@
 
 			const data = {
 				"en": {
-					info: "Im an Informatic student at the University of applied sciences in Trier at the end of my studies. I have been programming for almost 5 years and i'm interested on game development, as in web development and 3D web application development.",
+					info: "Im an Informatic student at the University of applied sciences in Trier at the end of my studies. I have been programming for almost 5 years and i'm interested on game development, as well as web development and 3D web application development.",
 					infoTitle: "Information",
-					infoDescription:"Here you can find personal informations about me.",
+					infoDescription:"Here you can find personal information about me.",
 					/////////////////
 					personalInfo:"Personal Information",
 					adressTitle:"Adress",
@@ -67,25 +67,25 @@
 					////////////////
 					langTitle: "Languages",
 					langSubtitle: "Programming languages",
-					graphParagraph:"This graphs shows the actual level in the diferent programming languages, it was made with help of D3.js",
+					graphParagraph:"This graphs shows the actual level in the different programming languages, it was made with help of D3.js",
 					////////////////
 					projectsTitle: "Projects",
-					projectSubtitle:"Here you will find all the proyects that i've for the unitversity, aswell as my personal proyects. You'll also find GitHub links for each one with the corresponding documentation.",
+					projectSubtitle:"Here you will find all the proyects that i've done for the unitversity, as well as my personal proyects. You'll also find GitHub links for each one with the corresponding documentation.",
 					firstProjektTitle:"1. Occlusion Culling in Unity3D",
 					firstProjektA:"The idea behind is for optimization purposes. Occlusion Culling is a well known and used technic on game development, to efficiently create alot of objects without damaging the game's performance.",
 					firstProjektB:"Only the needed objects will be rendered, that means, only those that are infront of the main camera. This way we save alot of memory and therefore the game can run better.",
 					firstProjektC:"You can try it yourself, here is a small demo: A S W D are the controllers for the character. Or you could directly look at the proyect at this GitHub link:",
 					secondProjektTitle:"2. Rubiks Cube for the Sony PSVita",
-					secondProjektA:"Here's a small game for the Sony PSVita. To make this game run you'll need the Sony API as well as a PSVita. Sadly it isn't easy to get the licences for it, but you can check anyways the code at this GitHub link:",
+					secondProjektA:"Here's a small game for the Sony PSVita. To make this game run you'll need the Sony API as well as a PSVita. Sadly it isn't easy to get the licences for it, but you can check the code nonetheless at this GitHub link:",
 					thirdProjektTitle:"3. Web application for Trier and sorroundings",
 					thirdProjektA:"A small modular Web application with RESTful API for the Backend. With the help of Leaflet (Open Source Maps) you can navigate around the region and look the height profile of the different cities.",
-					thirdProjektB:"This web application contains a couple of important APIs aswell as Best-Practices. It was created modular utilizing the concept of Common.js, the Backend uses RESTful API for structuring the server requests and Leaflet is used as an Open-Source Map display. GitHub link:",
+					thirdProjektB:"This web application contains a couple of important APIs as well as Best-Practices. It was created modular utilizing the concept of Common.js, the Backend uses RESTful API for structuring the server requests and Leaflet is used as an Open-Source Map display. GitHub link:",
 					forthProjektTitle:"4. Google Chrome Extension: Browsing timekeeper",
 					forthProjektA:"This small extention shows us how much time we've spent browsing the web. It was a funny experiment. Althought it has a couple of Bugs, it functions quite well.",
 					forthProjektB:"It was created utilizing Google's Developer API and Chart.js for data representation. GitHub link:",
 					fifthProjektTitle:"5. Angular.js: Résumé as a web application",
 					fifthProjektA:"Lastly we have this very own web application as Open-Source.",
-					fifthProjektB:"It contains some technologies, that are relevant for web development today. Node Package Manaer and Node.js are the basis of the server, managing the dependencies needed, while Bower manages the dependencies that the client needs. For the client i used Angular.js for the DOM-Manipulation and D3.js for the graphical representation of data. For the backend express and socket.io was utilized for sending and requesting data from the server, that is then used on the client. GitHub link:",
+					fifthProjektB:"It contains some technologies, that are relevant for web development today. Node Package Manager and Node.js are the basis of the server, managing the dependencies needed, while Bower manages the dependencies that the client needs. For the client i used Angular.js for the DOM-Manipulation and D3.js for the graphical representation of data. For the backend express and socket.io was utilized for sending and requesting data from the server, that is then used on the client. GitHub link:",
 					volvoTitle:"6. CAD file visualization application for the Microsoft Hololens",
 					volvoA:"This proyect was a team proyect for the university together with Volvo Konz. We created an application to be able to visualize CAD archives for the Hololens. It was created with help with Unity3D and Vuforia. For licence reasons code cannot be shown, but is important to know about my ability to create augmented/virtual reality applications.",
 					linkOcclusion:"Unity3D Proyect",
@@ -93,7 +93,7 @@
 					linkMap:"Trier Map",
 					linkExtension:"Timekeeping Extension",
 					unityDemo:"This application wasn't originally made to be run on a browser, please wait a minute for Unity to load its components!",
-					unityDemoInfo:"Controls: A S W D. Choose a desired amount of AI and activate FoV (Field of View), aswell as Struct and Sphere to test the effects more accurately."
+					unityDemoInfo:"Controls: A S W D. Choose a desired amount of AI and activate FoV (Field of View), as well as Struct and Sphere to test the effects more accurately."
 				},
 				"de": {
 					info: "Ich bin ein Informatik Student an der Hochschule Trier fast am Ende meines Studiums. Ich programmiere schon seit fast 5 Jahre und interesiere mich über die Entwicklung von Spiele, sowie Web-Entwicklung und 3D basierte Web-Anwendungen.",
