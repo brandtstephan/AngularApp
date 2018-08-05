@@ -9,10 +9,6 @@
           "content": "birthContent"
         },
         {
-          "title": "telefonTitle",
-          "content": "telefonContent"
-        },
-        {
           "title": "emailTitle",
           "content": "emailContent"
         },
@@ -46,20 +42,6 @@
     },
     {
       "open": false,
-      "title": "detailsTitle",
-      "content": [
-        {
-          "title": "programmTitle",
-          "content": "programmContent"
-        },
-        {
-          "title": "toolsTitle",
-          "content": "toolsContent"
-        }
-      ]
-    },
-    {
-      "open": false,
       "title": "workTitle",
       "content": [
         {
@@ -69,6 +51,20 @@
         {
           "title": "lastTitle",
           "content": "lastContent"
+        }
+      ]
+    },
+    {
+      "open": false,
+      "title": "detailsTitle",
+      "content": [
+        {
+          "title": "programmTitle",
+          "content": "programmContent"
+        },
+        {
+          "title": "toolsTitle",
+          "content": "toolsContent"
         }
       ]
     },
